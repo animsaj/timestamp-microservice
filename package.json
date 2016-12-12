@@ -1,0 +1,15 @@
+{
+  "name": "timestamp-microservice",
+  "version": "1.0.0",
+  "description": "microservice that returns unix and natural formated date if request parameter contains one of those",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "animsaj",
+  "license": "ISC",
+  "dependencies": {
+    "moment": "^2.17.1"
+  }
+}

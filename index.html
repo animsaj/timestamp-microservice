@@ -1,0 +1,26 @@
+<html>
+    <title>Timestamp Microservice</title>
+    <style>
+        body {
+            background-color: #222222; 
+            color: #FCFCFC; 
+            font-family: 'Inconsolata'; 
+            font-size: 24px;
+        }
+        code {
+            font-size: 18px;
+            color:aqua;
+        }
+    </style>
+    <body>
+        <h1>Hello, from the Timestamp Microservice!</h1>
+        <p>I can pass a string as a parameter, and it will check to see whether that string contains either a unix timestamp or a natural language date (example: January 1, 2016).</p>
+        <p>If it does, it returns both the Unix timestamp and the natural language form of that date.</p>
+        <p>If it does not contain a date or Unix timestamp, it returns null for those properties.</p>
+        <h3>Example usage:</h3>
+        <code>https://animsaj-timestamp-microservice.herokuapp.com/December%2015,%202015</code>
+        <code>https://animsaj-timestamp-microservice.herokuapp.com/1450137600</code>
+        <h3>Example output:</h3>
+        <code>{ "unix": 1450137600, "natural": "December 15, 2015" }</code>
+    </body>
+</html>
