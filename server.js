@@ -9,8 +9,9 @@ http.createServer(function(request, response) {
     } else {
         var url = request.url.substr(1);
         var responseBody = {};
-        //if parameter is Date in natural form
-        if ((new Date(decodeURI(url))).getTime() > 0) {
+        //if parameter is Date in natural form and is not February 29 in non-leap year
+        //is Valid() is moment library function
+        if ((new Date(decodeURI(url))).getTime() > 0 && moment(decodeURI(url), 'LL').isValid()) {
             responseBody.natural = decodeURI(url);
             responseBody.unix = moment(decodeURI(url), 'LL').valueOf() / 1000;
         } 
